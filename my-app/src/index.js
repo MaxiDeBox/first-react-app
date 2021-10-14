@@ -1,39 +1,65 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-function Welcome(props) {
-    return (
-      <p>Hello {props.user.name} {props.user.surname}!</p>
-    );
-}
-
-// class Welcome extends React.Component {
-//    render () {
-//        return <p>Hello {this.props.user.name} {this.props.user.surname}!</p>
-//    }
+// class Clock extends React.Component {
+//   constructor(props) {
+//     super(props);
+//
+//     this.state = {
+//       title: "Now Date",
+//       date: new Date(),
+//       counter: 0
+//     }
+//
+//     setInterval(() => {
+//       this.setState((state, props) => ({
+//         date: new Date(),
+//         counter: state.counter + 1
+//       }));
+//     }, 1000)
+//   }
+//
+//   render() {
+//     return (
+//       <div>
+//         <p>{this.state.title}</p>
+//         <p>{this.state.counter}</p>
+//         <p>{this.state.date.toLocaleTimeString()}</p>
+//       </div>
+//     );
+//   }
 // }
 
-function Appnew(props) {
-    const users = [
-      {name: "Alexey", surname: "test1"},
-      {name: "Maxim", surname: "test2"},
-      {name: "Pasha", surname: "test3"},
-    ];
+// Функциональный подход
+function Clock(props) {
+  const [state, setState] = useState({
+    title: "Now Date",
+    date: new Date(),
+    counter: 0
+  })
 
-    return (
-        <div>
-            <Welcome user={users[0]} />
-            <Welcome user={users[1]} />
-            <Welcome user={users[2]} />
-        </div>
-    );
+  setInterval(() => {
+    setState({
+      title: "Now Date",
+      date: new Date(),
+      counter: state.counter + 1
+    })
+  }, 1000)
+
+  return (
+    <div>
+      <p>{state.title}</p>
+      <p>{state.counter}</p>
+      <p>{state.date.toLocaleTimeString()}</p>
+    </div>
+  );
 }
 
 ReactDOM.render(
-  <Appnew />,
+  <Clock />,
   document.querySelector("#root")
 );
 
