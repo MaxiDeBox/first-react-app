@@ -1,25 +1,53 @@
-import logo from './logo.svg';
 import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.intervalFlag = null;
+
+    this.state = {
+      title: "Now Date",
+      date: new Date(),
+      counter: 0
+    }
+  }
+
+  /**
+   * компонент смонтировван
+   */
+  componentDidMount() {
+    this.intervalFlag = setInterval(() => {
+      this.setState((state, props) => ({
+        date: new Date(),
+        counter: state.counter + 1
+      }));
+    }, 1000);
+  }
+
+  /**
+   * у компонента произошло обновление
+   */
+  componentDidUpdate() {
+  }
+
+  /**
+   * завершение работы с компонентом
+   */
+  componentWillUnmount() {
+    clearInterval(this.intervalFlag);
+  }
+
+  render() {
+    return (
+      <div>
+        <p>{this.state.title}</p>
+        <p>{this.state.counter}</p>
+        <p>{this.state.date.toLocaleTimeString()}</p>
+      </div>
+    );
+  }
 }
 
 export default App;
