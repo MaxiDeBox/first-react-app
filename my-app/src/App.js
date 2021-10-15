@@ -1,25 +1,54 @@
 import logo from './logo.svg';
 import './App.css';
+import React, {useState} from "react";
 
-function App() {
+function App(props) {
+  const [counter, setCounter] = useState(0);
+  const handlerClick = (event) => {
+    setCounter(counter + 1);
+  }
+
+  const handlerMouseEnter = (event) => {
+    console.log(event);
+  }
+
+  const handlerMouseLeave = (event) => {
+    console.log(event);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <button
+      onClick={handlerClick}
+      onMouseEnter={handlerMouseEnter}
+      onMouseLeave={handlerMouseLeave}
+    >Click me! {counter}</button>
   );
 }
+
+// class App extends React.Component {
+//   constructor(props) {
+//     super(props);
+//
+//     this.state = {
+//       counter: 0
+//     }
+//
+//     // this.handlerClick = this.handlerClick.bind(this);
+//   }
+//
+//   // handlerClick() {
+//   //   this.setState({
+//   //     counter: this.state.counter + 1
+//   //   });
+//   // }
+//
+//   render() {
+//     return (
+//       <button onClick={() => this.setState({
+//         counter: this.state.counter + 1
+//       })}>Click me! {this.state.counter}</button>
+//     );
+//   }
+// }
 
 export default App;
