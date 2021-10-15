@@ -1,53 +1,53 @@
 import './App.css';
-import React from "react";
+import React, {useState} from "react";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.intervalFlag = null;
-
-    this.state = {
-      title: "Now Date",
-      date: new Date(),
-      counter: 0
-    }
+function App(props) {
+  const [counter, setCounter] = useState(0);
+  const handlerClick = (event) => {
+    setCounter(counter + 1);
   }
 
-  /**
-   * компонент смонтировван
-   */
-  componentDidMount() {
-    this.intervalFlag = setInterval(() => {
-      this.setState((state, props) => ({
-        date: new Date(),
-        counter: state.counter + 1
-      }));
-    }, 1000);
+  const handlerMouseEnter = (event) => {
+    console.log(event);
   }
 
-  /**
-   * у компонента произошло обновление
-   */
-  componentDidUpdate() {
+  const handlerMouseLeave = (event) => {
+    console.log(event);
   }
 
-  /**
-   * завершение работы с компонентом
-   */
-  componentWillUnmount() {
-    clearInterval(this.intervalFlag);
-  }
-
-  render() {
-    return (
-      <div>
-        <p>{this.state.title}</p>
-        <p>{this.state.counter}</p>
-        <p>{this.state.date.toLocaleTimeString()}</p>
-      </div>
-    );
-  }
+  return (
+    <button
+      onClick={handlerClick}
+      onMouseEnter={handlerMouseEnter}
+      onMouseLeave={handlerMouseLeave}
+    >Click me! {counter}</button>
+  );
 }
+
+// class App extends React.Component {
+//   constructor(props) {
+//     super(props);
+//
+//     this.state = {
+//       counter: 0
+//     }
+//
+//     // this.handlerClick = this.handlerClick.bind(this);
+//   }
+//
+//   // handlerClick() {
+//   //   this.setState({
+//   //     counter: this.state.counter + 1
+//   //   });
+//   // }
+//
+//   render() {
+//     return (
+//       <button onClick={() => this.setState({
+//         counter: this.state.counter + 1
+//       })}>Click me! {this.state.counter}</button>
+//     );
+//   }
+// }
 
 export default App;
