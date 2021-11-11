@@ -1,24 +1,31 @@
 import './App.css';
-import React from "react";
-import Button from "./Button";
+import React, {useState} from "react";
+
+import Content from './Content';
+import RecursiveButton from "./RecursiveButton";
 
 function App(props) {
-  const onThirdClick = () => {
-    console.log("third click was clicked");
-  };
+  // const value = Math.random() > Math.random();
+  // return <div>{value ? <p> true </p> : <p> false </p>}</div>;
+
+  const [showMode, setShowMode] = useState(false);
 
   const handlerClick = () => {
-    console.log("Click");
+    setShowMode(!showMode);
   }
 
-  const handlerMouseEnter = () => {
-    console.log("Mouse Enter")
+  let content = null;
+  if(showMode) {
+    content = <Content />
   }
 
-  return <Button
-          onThirdClick={onThirdClick}
-          onClick={handlerClick}
-          onMouseEnter={handlerMouseEnter}>New text button</Button>
+  return(
+    <div>
+      {/*<button onClick={handlerClick}> Show toggle </button>*/}
+      <RecursiveButton />
+      {content}
+    </div>
+  )
 }
 
 export default App;
