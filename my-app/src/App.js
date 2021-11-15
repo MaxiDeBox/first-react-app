@@ -1,62 +1,93 @@
 import './App.css';
 import React, {useState} from "react";
 
-function App() {
-  const users = [
-    {
-      id: 0,
-      name: "Maxim",
-      surname: "Pak"
-    },
-    {
-      id: 1,
-      name: "Dima",
-      surname: "Pak"
-    },
-    {
-      id: 2,
-      name: "Nata",
-      surname: "Pak"
-    },
-    {
-      id: 3,
-      name: "Andrey",
-      surname: "Pak"
-    },
-    {
-      id: 4,
-      name: "Igor",
-      surname: "Pak"
-    },
+function App(props) {
+  const [value, setValue] = useState("Some text");
+  const [checked, setChecked] = useState(false);
+  const [fruit, setFruite] = useState(false);
+  const [fruitSelect, setSelectedFruite] = useState("");
+
+  const fruits = [
+    "Apple",
+    "Banana",
+    "Orange"
   ];
 
-  const handlerMouseEnter = (user) => {
-    console.log(user.name);
-  }
-
-  let list = users.map((user, index) => {
-    const even = index % 2 === 0;
-    let style = {};
-
-    if (even) {
-      style = {
-        color: "white",
-        background: "black"
-      }
-    }
-
+  const handlerSelect = (event) => {
     return (
-      <li key={user.id} style={style} onMouseEnter={() => handlerMouseEnter(user)}>
-        {user.name} {user.surname}
-      </li>
-    )
-  });
+      setSelectedFruite(event.target.value)
+    );
+  };
 
   return (
-    <ul>
-      {list}
-    </ul>
+    <div className="App">
+      <h1>Elements Forms</h1>
+      <input value={value} onChange={(e) => {setValue(e.target.value)}} />
+      <br/>
+      <textarea value={value} onChange={(e) => {setValue(e.target.value)}} />
+      <br/>
+      {value}
+      <hr />
+      <label>
+        <input type="checkbox" checked={checked} onChange={() => setChecked(!checked)} />
+      </label>
+      <br />
+      {checked}
+      <hr />
+      <ul>
+        {fruits.map((item, index) => (
+          <li key={item}>
+            <label>
+              <input
+                type="radio"
+                checked={fruit === item}
+                onChange={() => setFruite(item)}
+              /> {item}
+            </label>
+          </li>
+        ))}
+      </ul>
+      <br />
+      {fruit}
+      <hr />
+      <br />
+      <select
+        onChange={(e) => handlerSelect(e)}>
+        {fruits.map((item, index) => (
+          <option key={item} value={item}>
+            {item}
+          </option>
+        ))}
+      </select>
+      <br />
+      {fruitSelect}
+    </div>
   );
 }
+
+// class App extends React.Component {
+//   constructor(props) {
+//     super(props);
+//
+//     this.state = {
+//       value: "Some text 2"
+//     };
+//   }
+//
+//   handlerOnChange(event) {
+//     this.setState({
+//       value: event.target.value
+//     });
+//   }
+//
+//   render () {
+//     return (
+//       <div className="App">
+//         <input value={this.state.value} onChange={(e) => this.handlerOnChange(e)} />
+//         {this.state.value}
+//       </div>
+//     );
+//   }
+// }
 
 export default App;
