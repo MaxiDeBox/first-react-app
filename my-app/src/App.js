@@ -1,31 +1,62 @@
 import './App.css';
 import React, {useState} from "react";
 
-import Content from './Content';
-import RecursiveButton from "./RecursiveButton";
+function App() {
+  const users = [
+    {
+      id: 0,
+      name: "Maxim",
+      surname: "Pak"
+    },
+    {
+      id: 1,
+      name: "Dima",
+      surname: "Pak"
+    },
+    {
+      id: 2,
+      name: "Nata",
+      surname: "Pak"
+    },
+    {
+      id: 3,
+      name: "Andrey",
+      surname: "Pak"
+    },
+    {
+      id: 4,
+      name: "Igor",
+      surname: "Pak"
+    },
+  ];
 
-function App(props) {
-  // const value = Math.random() > Math.random();
-  // return <div>{value ? <p> true </p> : <p> false </p>}</div>;
-
-  const [showMode, setShowMode] = useState(false);
-
-  const handlerClick = () => {
-    setShowMode(!showMode);
+  const handlerMouseEnter = (user) => {
+    console.log(user.name);
   }
 
-  let content = null;
-  if(showMode) {
-    content = <Content />
-  }
+  let list = users.map((user, index) => {
+    const even = index % 2 === 0;
+    let style = {};
 
-  return(
-    <div>
-      {/*<button onClick={handlerClick}> Show toggle </button>*/}
-      <RecursiveButton />
-      {content}
-    </div>
-  )
+    if (even) {
+      style = {
+        color: "white",
+        background: "black"
+      }
+    }
+
+    return (
+      <li key={user.id} style={style} onMouseEnter={() => handlerMouseEnter(user)}>
+        {user.name} {user.surname}
+      </li>
+    )
+  });
+
+  return (
+    <ul>
+      {list}
+    </ul>
+  );
 }
 
 export default App;
