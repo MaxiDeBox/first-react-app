@@ -1,61 +1,54 @@
 import './App.css';
 import React, {useState} from "react";
+import CitiesList from "./CitiesList";
+import City from "./City";
 
 function App() {
-  const users = [
+  const [cities, setCities] = useState([
     {
       id: 0,
-      name: "Maxim",
-      surname: "Pak"
+      name: "Moscow",
+      description: "More info about Moscow"
     },
     {
       id: 1,
-      name: "Dima",
-      surname: "Pak"
+      name: "Samara",
+      description: "More info about Samara"
     },
     {
       id: 2,
-      name: "Nata",
-      surname: "Pak"
-    },
-    {
-      id: 3,
-      name: "Andrey",
-      surname: "Pak"
-    },
-    {
-      id: 4,
-      name: "Igor",
-      surname: "Pak"
-    },
-  ];
+      name: "Piter",
+      description: "More info about Piter"
+    }
+  ]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const currentCity = cities[currentIndex];
 
-  const handlerMouseEnter = (user) => {
-    console.log(user.name);
+  const handlerChangeCity = (n, description) => {
+    setCities(cities.map((city, index) => {
+      if (index === n) {
+        return {
+          ...city,
+          description: description
+        }
+      }
+
+      return city;
+    }))
   }
 
-  let list = users.map((user, index) => {
-    const even = index % 2 === 0;
-    let style = {};
-
-    if (even) {
-      style = {
-        color: "white",
-        background: "black"
-      }
-    }
-
-    return (
-      <li key={user.id} style={style} onMouseEnter={() => handlerMouseEnter(user)}>
-        {user.name} {user.surname}
-      </li>
-    )
-  });
+  const handlerselectCity = (n) => {
+    setCurrentIndex(n)
+  }
 
   return (
-    <ul>
-      {list}
-    </ul>
+    <div className="App">
+      <City
+        city={currentCity}
+        onChangeCity={handlerChangeCity}
+        currentIndex={currentIndex} />
+      <CitiesList cities={cities} onSelectCity={handlerselectCity} />
+    </div>
   );
 }
 
