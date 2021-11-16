@@ -1,55 +1,67 @@
 import './App.css';
-import React, {useState} from "react";
-import CitiesList from "./CitiesList";
-import City from "./City";
+import {useState} from "react";
+
+// function App() {
+//   const [counters, setCounters] = useState([0, 0, 0]);
+//
+//   const count = (n) => {
+//     return setCounters(
+//       counters.map((v, i) => {
+//         return (n === i) ? v + 1 : v;
+//       })
+//     );
+//   }
+//
+//   return (
+//     <div className="App">
+//       <ul>
+//         {
+//           counters.map((item, index) => (
+//             <li key={index}>
+//               <button onClick={() => count(index)}> Clicked {counters[index]} </button>
+//             </li>
+//           ))
+//         }
+//       </ul>
+//     </div>
+//   );
+// }
+
+// function App() {
+//   const [state, setState] = useState({
+//     counter: 0,
+//     user: {
+//       name: "Maxim",
+//       surname: "Pak"
+//     }
+//   });
+//
+//   const handlerClick = () => {
+//     console.log(state);
+//     setState({
+//        counter: state.counter + 1,
+//         ...state
+//     })
+//   }
+//
+//   return (
+//     <div className="App">
+//       <button onClick={handlerClick}>Click</button>
+//     </div>
+//   )
+// }
 
 function App() {
-  const [cities, setCities] = useState([
-    {
-      id: 0,
-      name: "Moscow",
-      description: "More info about Moscow"
-    },
-    {
-      id: 1,
-      name: "Samara",
-      description: "More info about Samara"
-    },
-    {
-      id: 2,
-      name: "Piter",
-      description: "More info about Piter"
-    }
-  ]);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const currentCity = cities[currentIndex];
-
-  const handlerChangeCity = (n, description) => {
-    setCities(cities.map((city, index) => {
-      if (index === n) {
-        return {
-          ...city,
-          description: description
-        }
-      }
-
-      return city;
-    }))
+  const [counter, setCounter] = useState(0);
+  const handlerClick = () => {
+    setCounter((x, props) => x + 1);
+    setCounter((x, props) => x + 1);
   }
-
-  const handlerselectCity = (n) => {
-    setCurrentIndex(n)
-  }
-
   return (
     <div className="App">
-      <City
-        city={currentCity}
-        onChangeCity={handlerChangeCity}
-        currentIndex={currentIndex} />
-      <CitiesList cities={cities} onSelectCity={handlerselectCity} />
+      <button onClick={handlerClick}>Clicked {counter}</button>
     </div>
-  );
+  )
 }
 
 export default App;
