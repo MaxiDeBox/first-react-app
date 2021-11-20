@@ -1,35 +1,22 @@
 import './App.css';
-import {useEffect, useState} from "react";
+import {useEffect, useState, useMemo, useCallback} from "react";
 
 function App() {
-  // Заменяет методы жизнего цикла componentDidMount componentDidUpdate
-  // useEffect(() => {
-  //   console.log(document.querySelector("#target"));
-  // });
+  const [message, setMessage] = useState("Hello");
+  const [counter, setCounter] = useState(0);
 
-  // Вызов единожды
-  // const [users, setUsers] = useState([]);
-  // const [search, setSearch] = useState("");
-  //
-  // useEffect(() => {
-  //   fetch("/users?search" + search)
-  //     .then(response => response.json)
-  //     .then(users => setUsers(users))
-  // }, [search]);
+  const greeting = useCallback((text) => {
+    console.log(text);
+  }, []);
 
-  // Работа с интервалом
-  const [timer, setTimer] = useState(0);
   useEffect(() => {
-    const flagInterval = setInterval(() => {
-      setTimer(timer + 1);
-    }, 1000);
+    greeting(message);
+  }, [greeting, message]);
 
-    return () => clearInterval(flagInterval);
-  });
 
   return (
     <div className="App">
-      <p id="target">Hello {timer}</p>
+      <button onClick={() => setCounter(counter + 1)}> На меня нажали {counter} </button>
     </div>
   )
 }
