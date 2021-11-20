@@ -24,6 +24,6 @@ function App() {
       </div>
     </Context.Provider>
   );
-}
+};
 
 export default App;
