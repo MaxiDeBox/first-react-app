@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import ActionsCard from "./ActionsCard";
+import StatusCard from "./StatusCard";
+import {useState} from "react";
+import Context from "./Context";
 
 function App() {
+  const [counter, setCounter] = useState(0);
+
+  const count = (n) => {
+    return setCounter(counter + n);
+  };
+
+  const value = {
+    counter,
+    count
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Context.Provider value={value}>
+      <div className="container">
+        <StatusCard />
+        <ActionsCard />
+      </div>
+    </Context.Provider>
   );
 }
 
