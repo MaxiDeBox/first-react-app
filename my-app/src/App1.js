@@ -1,45 +1,25 @@
 import './App.css';
-import {useEffect, useState, useMemo} from "react";
-
-function createUser(name, surname) {
-  const user = {
-    name,
-    surname
-  }
-
-  console.log(user);
-
-  return user;
-}
+import {useState, useRef, useEffect} from "react";
 
 function App() {
-  const [name, setName] = useState("");
-  const [surname, setSurname] = useState("");
   const [counter, setCounter] = useState(0);
+  const ref = useRef();
 
-  const user = useMemo(() => createUser(name, surname), [
-    name,
-    surname
-  ]);
+  useEffect(() => {
+    ref.current = 0
+  }, []);
 
   return (
     <div className="App">
-      <div>
-        <p>
-          <button onClick={(e) => setCounter(counter + 1)}>На меня нажали {counter}</button>
-        </p>
-        <p>
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-        </p>
-        <p>
-          <input type="text" value={surname} onChange={(e) => setSurname(e.target.value)} />
-        </p>
-      </div>
-      <pre>
-        { JSON.stringify(user, null, 2) }
-      </pre>
+      <button onClick={() => ref.current++}>
+        Меня кликнули {counter} раз.
+      </button>
+      <br />
+      <button onClick={() => setCounter(ref.current)}>
+        Click
+      </button>
     </div>
-  )
+  );
 }
 
 export default App;

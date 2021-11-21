@@ -1,28 +1,36 @@
 import './App.css';
-import ActionsCard from "./ActionsCard";
-import StatusCard from "./StatusCard";
-import {useState} from "react";
-import Context from "./Context";
+import {useState, useRef, useEffect} from "react";
 
 function App() {
-  const [counter, setCounter] = useState(0);
+  const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
 
-  const count = (n) => {
-    return setCounter(counter + n);
-  };
+  const nameInputRef = useRef();
+  const surnameInputRef = useRef();
 
-  const value = {
-    counter,
-    count
+  const handlerOnKeyUp = (e) => {
+    if (e.key === "Enter") {
+      surnameInputRef.current.focus();
+    }
   };
 
   return (
-    <Context.Provider value={value}>
-      <div className="container">
-        <StatusCard />
-        <ActionsCard />
-      </div>
-    </Context.Provider>
+    <div className="App">
+      <p>
+        <input type="text"
+               placeholder="Name"
+               ref={nameInputRef}
+               value={name}
+               onChange={(e) => setName(e.target.value)} onKeyUp={handlerOnKeyUp} />
+      </p>
+      <p>
+        <input type="text"
+               placeholder="Surname"
+               ref={surnameInputRef}
+               value={surname}
+               onChange={(e) => setSurname(e.target.value)} />
+      </p>
+    </div>
   );
 };
 
