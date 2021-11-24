@@ -1,40 +1,96 @@
 import './App.css';
-import useOne from "./useOne";
-import {useState} from "react";
-import useCounter from "./useCounter";
-import useSmartCounter from "./useSmartCounter";
+import {useCallback, useEffect, useRef} from "react";
+
+const ENTER = "Enter";
 
 // function App() {
-//   useOne(() => {
-//     console.log("1 раз вызван");
-//   });
+//   const ref = useRef();
 //
-//   const {counter, count} = useCounter()
+//   const handlerClick = useCallback(() => {
+//     console.log(ref.current.value)
+//   }, [ref]);
+//
+//   const handlerKeyup = useCallback((event) => {
+//     const {key} = event;
+//
+//     if (key === ENTER) {
+//       handlerClick();
+//     }
+//
+//   }, [handlerClick])
+//
+//   useEffect(() => {
+//     if(ref.current) {
+//       ref.current.addEventListener("keyup", handlerKeyup);
+//
+//       return () => {
+//         ref.current.removeEventListener("keyup", handlerKeyup);
+//       };
+//     }
+//   }, [handlerKeyup]);
 //
 //   return (
 //     <div className="App">
-//       <button onClick={count}>
-//         Нажали на меня {counter} раз
-//       </button>
+//       <input ref={ref} />
+//       <button onClick={handlerClick}>Send</button>
 //     </div>
 //   );
 // }
 
+
 function App() {
-  const {counter, addOne, addFive, removeOne, removeFive} = useSmartCounter();
+  const userName = useRef("");
+  const userSurname = useRef("");
+
+  const onButtonClick = useCallback(() => {
+    const user = {
+      name: userName.current.value,
+      surname: userSurname.current.value
+    };
+
+    if(!userName.current.value) {
+      userName.current.focus();
+    }
+
+    if(!userSurname.current.value) {
+      userSurname.current.focus();
+    }
+
+    if(userSurname.current.value && userName.current.value) {
+      console.log(user);
+    }
+  }, [userName, userSurname]);
+
+  const onKeyUp = useCallback((event) => {
+    const {key} = event;
+
+    if (key === ENTER) {
+      onButtonClick();
+    }
+
+  }, [onButtonClick]);
+
+  useEffect(() => {
+    if(userName.current && userSurname.current) {
+      userName.current.addEventListener("keyup", onKeyUp);
+      userSurname.current.addEventListener("keyup", onKeyUp);
+    }
+
+    return () => {
+      userName.current.removeListener("keyup", onKeyUp);
+      userSurname.current.removeListener("keyup", onKeyUp);
+    }
+  }, [onKeyUp]);
+
   return (
     <div className="App">
       <p>
-        <span>{counter}</span>
+        <input ref={userName} type="text" placeholder="Your name" />
       </p>
       <p>
-        <button onClick={addOne}>+1</button>
-        <button onClick={addFive}>+5</button>
+        <input ref={userSurname} type="text" placeholder="Your surname" />
       </p>
-      <p>
-        <button onClick={removeOne}>-1</button>
-        <button onClick={removeFive}>-5</button>
-      </p>
+      <button onClick={onButtonClick}>Send</button>
     </div>
   );
 };
