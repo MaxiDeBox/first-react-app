@@ -93,6 +93,6 @@ function App() {
       <button onClick={onButtonClick}>Send</button>
     </div>
   );
-}
+};
 
 export default App;
