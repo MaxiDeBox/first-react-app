@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import UserCard from "./UserCard";
 
 function App() {
+  const users = [
+    { id: 0, name: "Maxim", surname: "Pak" },
+    { id: 1, name: "Alexey", surname: "Andreenko" },
+    { id: 2, name: "Dmitry", surname: "Sadikov" },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <UserCard user={users[0]}
+                onSendInvite={() => console.log(users[0].id+" invite")}
+                onSendMessage={() => console.log(users[0])}
+      />
+      <UserCard user={users[1]} />
+      <UserCard user={users[2]} />
     </div>
   );
 }
