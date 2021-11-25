@@ -18,6 +18,6 @@ function App() {
       <UserCard user={users[2]} />
     </div>
   );
-}
+};
 
 export default App;
