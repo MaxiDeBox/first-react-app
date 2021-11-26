@@ -40,6 +40,6 @@ function App() {
       </Table>
     </div>
   );
-}
+};
 
 export default App;
