@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import { Table, TableBody, TableCell, TableHead, TableRow } from "./Сomponents";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>Id</TableCell>
+            <TableCell>Name</TableCell>
+            <TableCell>UserName</TableCell>
+          </TableRow>
+          <TableBody>
+            <TableRow>
+              <TableCell>1</TableCell>
+              <TableCell>Maxim</TableCell>
+              <TableCell>Pak</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>2</TableCell>
+              <TableCell>Dmitry</TableCell>
+              <TableCell>Ivanov</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>3</TableCell>
+              <TableCell>Sergey</TableCell>
+              <TableCell>Balalaev</TableCell>
+            </TableRow>
+          </TableBody>
+        </TableHead>
+      </Table>
     </div>
   );
 }
