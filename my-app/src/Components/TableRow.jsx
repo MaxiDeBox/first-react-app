@@ -1,4 +1,4 @@
-export function TableRow(props) {
+export default function TableRow(props) {
   const { children, ...datum } = props;
   return (
     <tr {...datum}>

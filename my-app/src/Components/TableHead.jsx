@@ -1,4 +1,4 @@
-export function TableHead(props) {
+export default function TableHead(props) {
   const { children, ...datum } = props;
   return (
     <thead {...datum}>

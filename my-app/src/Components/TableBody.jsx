@@ -1,4 +1,4 @@
-export function TableBody(props) {
+export default function TableBody(props) {
   const { children, ...datum } = props;
 
   return (

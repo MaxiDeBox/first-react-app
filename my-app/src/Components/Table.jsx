@@ -1,4 +1,4 @@
-export function Table(props) {
+export default function Table(props) {
   const { children, style = {}, ...datum } = props;
 
   return (
