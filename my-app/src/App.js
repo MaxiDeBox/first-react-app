@@ -1,21 +1,43 @@
 import './App.css';
-import UserCard from "./UserCard";
+import {Table, TableBody, TableCell, TableHead, TableRow} from "./Components";
+import {useEffect, useRef} from "react";
+
 
 function App() {
-  const users = [
-    { id: 0, name: "Maxim", surname: "Pak" },
-    { id: 1, name: "Alexey", surname: "Andreenko" },
-    { id: 2, name: "Dmitry", surname: "Sadikov" },
-  ];
+  const ref = useRef();
+
+  useEffect(() => {
+    console.log(ref.current);
+  }, []);
 
   return (
     <div className="App">
-      <UserCard user={users[0]}
-                onSendInvite={() => console.log(users[0].id+" invite")}
-                onSendMessage={() => console.log(users[0])}
-      />
-      <UserCard user={users[1]} />
-      <UserCard user={users[2]} />
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell ref={ref}>Id</TableCell>
+            <TableCell>Name</TableCell>
+            <TableCell>UserName</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          <TableRow>
+            <TableCell>1</TableCell>
+            <TableCell onClick={() => console.log("Maxim")}>Maxim</TableCell>
+            <TableCell>Pak</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>2</TableCell>
+            <TableCell>Dmitry</TableCell>
+            <TableCell>Ivanov</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>3</TableCell>
+            <TableCell>Sergey</TableCell>
+            <TableCell>Balalaev</TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
     </div>
   );
 };
