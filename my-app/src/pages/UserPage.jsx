@@ -1,12 +1,12 @@
 import { useCallback, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { edit } from "../store/users";
 
 const UserPage = () => {
   const params = useParams();
   const dispatch = useDispatch();
-  const history = useHistory();
+  const history = useNavigate();
 
   const userId = parseInt(params.userId, 10);
 

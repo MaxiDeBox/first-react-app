@@ -1,19 +1,17 @@
 import "./styles.css";
 
-import { Switch, Route } from "react-router-dom";
+import { Routes ,Route } from 'react-router-dom';
 import { UserPage, MainPage } from "./pages";
 
 export default function App() {
   return (
-    <Switch>
-      <Route exact path="/user/:userId" component={UserPage} />
+    <Routes>
+      <Route exact path="/user/:userId" element={<UserPage />} />
 
       <Route
         path="*"
-        render={() => {
-          return <MainPage />;
-        }}
+        element={<MainPage />}
       />
-    </Switch>
+    </Routes>
   );
 }
