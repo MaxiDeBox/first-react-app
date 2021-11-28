@@ -5,6 +5,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from "react-redux";
 import store from "./store"
+import { BrowserRouter } from "react-router-dom";
 
 // class Clock extends React.Component {
 //   constructor(props) {
@@ -62,9 +63,11 @@ function Clock(props) {
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
