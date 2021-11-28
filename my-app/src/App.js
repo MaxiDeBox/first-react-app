@@ -28,10 +28,9 @@ function App() {
             </li>
           ))}
       </ul>
-
     </div>
   );
-}
+};
 
 export default App;
 
