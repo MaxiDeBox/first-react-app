@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="824b1cdf-ec35-4caa-b760-555994c58d01" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_11_2021_14_04__Changes_.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="ReduxToolkit" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="ProjectId" id="1yojKNc59zdkjeqBg74nn2GRv7k" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/my-app/src" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="C:\adataproject\simbirsoft\inka\node_modules\@eslint" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\adataproject\first-react-app\my-app\src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="824b1cdf-ec35-4caa-b760-555994c58d01" name="Changes" comment="" />
+      <created>1632924769534</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1632924769534</updated>
+      <workItem from="1632924771000" duration="1200000" />
+      <workItem from="1633610317297" duration="599000" />
+      <workItem from="1634205407478" duration="5963000" />
+      <workItem from="1634281586558" duration="6195000" />
+      <workItem from="1634792758293" duration="5000" />
+      <workItem from="1635412170560" duration="21000" />
+      <workItem from="1636622080984" duration="5829000" />
+      <workItem from="1636956076797" duration="9478000" />
+      <workItem from="1637044076962" duration="5269000" />
+      <workItem from="1637144123446" duration="599000" />
+      <workItem from="1637387936864" duration="650000" />
+      <workItem from="1637406414630" duration="8493000" />
+      <workItem from="1637491480391" duration="5293000" />
+      <workItem from="1637643953017" duration="3681000" />
+      <workItem from="1637733949133" duration="21000" />
+      <workItem from="1637769348498" duration="3860000" />
+      <workItem from="1637828199658" duration="2510000" />
+      <workItem from="1637929665047" duration="6815000" />
+      <workItem from="1638085821929" duration="3981000" />
+      <workItem from="1638089826978" duration="1553000" />
+      <workItem from="1638091402510" duration="6051000" />
+      <workItem from="1638180761269" duration="81000" />
+    </task>
+    <task id="LOCAL-00001" summary="Элемент и входные параметры">
+      <created>1634208518028</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1634208518028</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Компонент и Состояние">
+      <created>1634210795040</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1634210795041</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Жизненный цикл компонента">
+      <created>1634287483703</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1634287483703</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Обработка событий">
+      <created>1634290968716</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1634290968716</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Пользовательские события">
+      <created>1636625295431</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1636625295431</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Условный рендринг">
+      <created>1636629040359</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1636629040359</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Рендринг списка">
+      <created>1636957642891</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1636957642891</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Обработка формы">
+      <created>1636961458716</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1636961458716</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Поднятие состояния">
+      <created>1636964332236</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1636964332236</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Хук useState">
+      <created>1637047629373</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1637047629373</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Хук useEffect">
+      <created>1637049262280</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1637049262280</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Хук useMemo и useCallback">
+      <created>1637408538751</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1637408538751</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Хук useReducer">
+      <created>1637411154887</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1637411154887</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Хук useContext">
+      <created>1637413526009</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1637413526009</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Хук useRef">
+      <created>1637493381467</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1637493381467</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Пользовательский хук">
+      <created>1637495428244</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1637495428244</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Render-Prop">
+      <created>1637647050885</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1637647050885</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Управляемые и неуправляемые компоненты">
+      <created>1637773027462</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1637773027462</updated>
+    </task>
+    <task id="LOCAL-00019" summary="PropTypes">
+      <created>1637830087398</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1637830087398</updated>
+    </task>
+    <task id="LOCAL-00020" summary="forwardRef">
+      <created>1637931398779</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1637931398779</updated>
+    </task>
+    <task id="LOCAL-00021" summary="forwardRef upd">
+      <created>1637939931960</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1637939931960</updated>
+    </task>
+    <task id="LOCAL-00022" summary="babel-plugin-module-resolver">
+      <created>1637940575299</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1637940575299</updated>
+    </task>
+    <task id="LOCAL-00023" summary="babel-plugin-module-resolver upd">
+      <created>1637942286827</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1637942286827</updated>
+    </task>
+    <task id="LOCAL-00024" summary="@redux/toolkit">
+      <created>1638093360550</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1638093360550</updated>
+    </task>
+    <task id="LOCAL-00025" summary="@redux/toolkit upd">
+      <created>1638093656788</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1638093656788</updated>
+    </task>
+    <task id="LOCAL-00026" summary="@redux/toolkit upd2">
+      <created>1638094647018</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1638094647018</updated>
+    </task>
+    <task id="LOCAL-00027" summary="@redux/toolkit upd3">
+      <created>1638094769158</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1638094769158</updated>
+    </task>
+    <task id="LOCAL-00028" summary="react-router-dom">
+      <created>1638095635423</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1638095635423</updated>
+    </task>
+    <task id="LOCAL-00029" summary="react-router-dom upd">
+      <created>1638095650233</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1638095650233</updated>
+    </task>
+    <task id="LOCAL-00030" summary="react-router-dom upd2">
+      <created>1638096726971</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1638096726971</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Условный рендринг" />
+    <MESSAGE value="Рендринг списка" />
+    <MESSAGE value="Обработка формы" />
+    <MESSAGE value="Поднятие состояния" />
+    <MESSAGE value="Хук useState" />
+    <MESSAGE value="Хук useEffect" />
+    <MESSAGE value="Хук useMemo и useCallback" />
+    <MESSAGE value="Хук useReducer" />
+    <MESSAGE value="Хук useContext" />
+    <MESSAGE value="Хук useRef" />
+    <MESSAGE value="Пользовательский хук" />
+    <MESSAGE value="Render-Prop" />
+    <MESSAGE value="Управляемые и неуправляемые компоненты" />
+    <MESSAGE value="PropTypes" />
+    <MESSAGE value="forwardRef" />
+    <MESSAGE value="forwardRef upd" />
+    <MESSAGE value="babel-plugin-module-resolver" />
+    <MESSAGE value="babel-plugin-module-resolver upd" />
+    <MESSAGE value="@redux/toolkit" />
+    <MESSAGE value="@redux/toolkit upd" />
+    <MESSAGE value="@redux/toolkit upd2" />
+    <MESSAGE value="@redux/toolkit upd3" />
+    <MESSAGE value="react-router-dom" />
+    <MESSAGE value="react-router-dom upd" />
+    <MESSAGE value="react-router-dom upd2" />
+    <option name="LAST_COMMIT_MESSAGE" value="react-router-dom upd2" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
