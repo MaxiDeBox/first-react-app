@@ -1,7 +1,4 @@
-import "./styles.css";
-
-import { Routes ,Route } from 'react-router-dom';
-import { UserPage, MainPage } from "./pages";
+import "./App.css";
 
 export default function App() {
   return (
