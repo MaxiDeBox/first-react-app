@@ -5,13 +5,8 @@ import { UserPage, MainPage } from "./pages";
 
 export default function App() {
   return (
-    <Routes>
-      <Route exact path="/user/:userId" element={<UserPage />} />
-
-      <Route
-        path="*"
-        element={<MainPage />}
-      />
-    </Routes>
+    <div>
+      hello
+    </div>
   );
 }
