@@ -1,9 +1,22 @@
 import "./App.css";
+import ErrorBoundary from "./ErrorBoundary";
+import ButtonWithError from "./ButtonWithError";
+
 
 export default function App() {
   return (
-    <div>
-      hello
-    </div>
+    <>
+      <ErrorBoundary errorHandler={(error, errorInfo) => <p>{error.message}</p>}>
+        <ButtonWithError />
+      </ErrorBoundary>
+
+      <ErrorBoundary errorHandler={(error, errorInfo) => <p>{error.message}</p>}>
+        <ButtonWithError />
+      </ErrorBoundary>
+
+      <ErrorBoundary errorHandler={(error, errorInfo) => <p>{error.message}</p>}>
+        <ButtonWithError />
+      </ErrorBoundary>
+    </>
   );
 }
