@@ -1,22 +1,14 @@
 import "./App.css";
-import ErrorBoundary from "./ErrorBoundary";
-import ButtonWithError from "./ButtonWithError";
-
+import Modal from "./Modal";
+import {useState} from "react";
 
 export default function App() {
+  const [open, setOpen] = useState(false);
+
   return (
     <>
-      <ErrorBoundary errorHandler={(error, errorInfo) => <p>{error.message}</p>}>
-        <ButtonWithError />
-      </ErrorBoundary>
-
-      <ErrorBoundary errorHandler={(error, errorInfo) => <p>{error.message}</p>}>
-        <ButtonWithError />
-      </ErrorBoundary>
-
-      <ErrorBoundary errorHandler={(error, errorInfo) => <p>{error.message}</p>}>
-        <ButtonWithError />
-      </ErrorBoundary>
+      <button onClick={() => setOpen(true)}>Open/Close</button>
+      <Modal open={open} onClose={() => setOpen(false)} marker="modal_1">123</Modal>
     </>
   );
 }
